@@ -69,3 +69,14 @@ GSAP 3.13 is loaded from jsDelivr in the shared layout. Animations respect the b
 ## Database
 
 This activity does not use a database, so no database export is required for this version.
+
+## Deploy on Render
+
+Create a Render Web Service using the Docker runtime and leave the root directory blank. Configure these environment variables:
+
+```text
+CI_ENVIRONMENT=production
+app_baseURL=https://your-service-name.onrender.com/
+```
+
+Set the health check path to `/`. The included Docker configuration serves CodeIgniter from its `public` directory, enables Apache URL rewriting, installs the required PHP extensions, and listens on Render's assigned `PORT`.

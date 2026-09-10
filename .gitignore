@@ -1,4 +1,10 @@
+.env
 node_modules/
 npm-debug.log*
-.env
+
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
 env
